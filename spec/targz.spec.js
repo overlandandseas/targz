@@ -4,9 +4,8 @@ const targz = require('../lib/targz')
 const rimraf = require('rimraf')
 const fs = require('fs')
 
-
-describe('The targz module', () => { //targz
-    describe('the "compress" function', () => { //compress
+describe('The targz module', () => {
+    describe('the "compress" function', () => {
         const srcPath = `${__dirname}/compressiontest/uncompressedbmth.txt`
         const destPath = `${__dirname}/compressiontest/compressedbmth.tar.gz`
         let originalFileStats = false
@@ -31,12 +30,12 @@ describe('The targz module', () => { //targz
 
         it('should throw error is no source is defined', () => {
             targz.compress({dest: destPath}, err => {
-                expect(err).toBe("No source for compress!")
+                expect(err.message).toBe("No source for compress!")
             })
         })
         it('should throw error is no destination is defined', () => {
             targz.compress({src: srcPath}, err => {
-                expect(err).toBe("No destination for compress!")
+                expect(err.message).toBe("No destination for compress!")
             })
         })
     })
@@ -63,12 +62,12 @@ describe('The targz module', () => { //targz
         })
         it('should throw error is no source is defined', () => {
             targz.decompress({dest: destPath}, err => {
-                expect(err).toBe("No source for decompress!")
+                expect(err.message).toBe("No source for decompress!")
             })
         })
         it('should throw error is no destination is defined', () => {
             targz.decompress({src: srcPath}, err => {
-                expect(err).toBe("No destination for decompress!")
+                expect(err.message).toBe("No destination for decompress!")
             })
         })
     })

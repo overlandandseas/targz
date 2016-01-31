@@ -12,25 +12,25 @@ npm install targz
 
 ```javascript
 
-var targz = require('targz');
+const targz = require('targz');
 
 // compress files into tar.gz archive
 targz.compress({
     src: 'path_to_files',
     dest: 'path_to_compressed_file'
-}, function(err){
+}, err => {
     if(err) {
         console.log(err);
     } else {
         console.log("Done!");
     }
-});
+})
 
 // decompress files from tar.gz archive
 targz.decompress({
     src: 'path_to_compressed file',
     dest: 'path_to_extract'
-}, function(err){
+}, err => {
     if(err) {
         console.log(err);
     } else {
