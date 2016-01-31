@@ -1,1 +1,1 @@
-module.exports = require('./lib/targz.js');
+module.exports = require('./lib/targz.js')

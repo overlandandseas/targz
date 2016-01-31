@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "TarGz for NodeJS",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jasmine"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miskun/targz.git"
@@ -24,5 +26,9 @@
   "homepage": "https://github.com/miskun/targz#readme",
   "dependencies": {
     "tar-fs": "^1.8.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "rimraf": "^2.5.1"
   }
 }
