@@ -4,7 +4,8 @@
   "description": "TarGz for NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "node spec/runtests.js",
+    "mocha": "mocha"
   },
   "repository": {
     "type": "git",
